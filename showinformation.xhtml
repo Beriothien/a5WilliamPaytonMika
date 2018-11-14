@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+    <head jsf:id="head">
+        <style>
+        body {
+  background-color: #183159;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #a7aeba;
+}
+        </style>
+        <title>User Information</title>
+    </head>
+    <body jsf:id="body">
+        <h2>
+        <center>
+            <table>
+                <tr>
+                    <th colspan="3"></th>
+                </tr>
+                <tr>
+                    <td>Name:</td>
+                    <td>#{registrationBean.lastName}</td>
+                    <td>#{registrationBean.name}</td>
+                </tr>
+                <tr>
+                    <td>Contact:</td>
+                    <td>#{registrationBean.email}</td>
+                    <td>#{registrationBean.phone}</td>
+                    
+                </tr>
+                <tr>
+                    <td>City:</td>
+                    <td>#{registrationBean.city}</td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>#{registrationBean.gender}</td>
+                </tr>
+                <tr>
+                    <td>Languages:</td>
+                    <td>#{registrationBean.languages}</td>
+                </tr>               
+            </table>
+            <br/>
+            <br/>
+            <a href="index.xhtml">Go Back to Home Page</a>
+        </center>
+        </h2>
+    </body>
+</html>
