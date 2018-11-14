@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Input Form</title>
+        <h:outputStylesheet name="styles.css" library="css"/>
+    </h:head>
+    <h:body>
+        <h1>          <br/>
+            <center>
+             Registration Form:
+             </center>
+        </h1>
+        
+        <h:form id="form1">
+            
+            <h2>
+                <center>
+                <h:panelGrid columns="1">
+                    Last Name:
+                    <h:inputText id="flname" value="#{registrationBean.lastName}"/>
+                    <h:message for="flname" errorStyle="color: red" infoStyle="color: red" />
+                    First Name:
+                    <h:inputText id="fname" value="#{registrationBean.name}"/>
+                    <h:message for="fname" errorStyle="color: red" infoStyle="color: red" />
+                    Password:
+                    <h:inputSecret id="fpass"  value="#{registrationBean.password}"/>
+                    <h:message for="fpass" errorStyle="color: red" infoStyle="color: red" />
+                    Email:
+                    <h:inputText id="femail" value="#{registrationBean.email}"/>
+                    <h:message for="femail" errorStyle="color: red" infoStyle="color: red" />
+                    Phone:
+                    <h:inputText id="fphone" value="#{registrationBean.phone}"/>
+                    <h:message for="fphone" errorStyle="color: red" infoStyle="color: red" />
+                    City:
+                    <h:selectOneMenu id="fcity" value="#{registrationBean.city}">
+                        <f:selectItem itemValue="-- choose --" />
+                        <f:selectItem itemValue="Edmond" />
+                        <f:selectItem itemValue="Moore" />
+                        <f:selectItem itemValue="Oklahoma City" />
+                        <f:selectItem itemValue="Norman" />
+                        <f:selectItem itemValue="Yukon" />
+                    </h:selectOneMenu>
+                    <h:message for="fcity" errorStyle="color: red" infoStyle="color: green" />
+                    
+                    Gender:
+                    <h:selectOneRadio id="fgender" value="#{registrationBean.gender}">
+                        <f:selectItem itemValue="Male" itemLabel="Male" />
+                        <f:selectItem itemValue="Female" itemLabel="Female" />
+                    </h:selectOneRadio>
+                    <h:message for="fgender" errorStyle="color: red" infoStyle="color: green" />
+                    
+                    Languages:
+                    <h:selectManyCheckbox id="flanguage" value="#{registrationBean.languages}">
+                        <f:selectItem itemValue="Java" />
+                        <f:selectItem itemValue="C++" />
+                        <f:selectItem itemValue="Pascal" />
+                        <f:selectItem itemValue="C#" />
+                    </h:selectManyCheckbox>
+                    <h:message for="flanguage" errorStyle="color: red" infoStyle="color: green" />
+                    
+                    <h:panelGroup />
+                    <h:commandButton id="fbutton" value="Sign Up" action="#{registrationBean.showInfo}"/>
+                    <h:panelGroup />
+                </h:panelGrid>
+                </center>
+            </h2>
+        </h:form>
+    </h:body>
+</html>
