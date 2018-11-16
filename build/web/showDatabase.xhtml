@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head jsf:id="head">
+        <title>User Information</title>
+        <style>
+           background-color: greenyellow
+        </style>
+    </head>
+    <body jsf:id="body">
+        <center>
+            <table>
+                <tr>
+                    <th><h:graphicImage name="peppapig.jpg" library="image" /><br/></th>
+
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td>#{registrationBean.lastname}</td>
+                </tr>
+                <tr>
+                    <td> First Name:</td>
+                    <td>#{registrationBean.name}</td>
+                </tr>
+                <tr>
+                    <td> Password:</td>
+                    <td>#{registrationBean.password}</td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td>#{registrationBean.email}</td>
+                </tr>
+                <tr>
+                    <td>Phone Number:</td>
+                    <td>#{registrationBean.phoneNumber}</td>
+                </tr>
+                <tr>
+                    <td>Hometown:</td>
+                    <td>#{registrationBean.city}</td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>#{registrationBean.gender}</td>
+                </tr>
+                <tr>
+                    <td>Languages:</td>
+                    <td>#{registrationBean.languages}</td>
+                </tr>               
+            </table>
+            <br/>
+            <br/>
+            <a href="index.xhtml">Go Back to Home Page</a>
+        </center>
+    </body>
+</html>
